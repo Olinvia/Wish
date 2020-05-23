@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>心愿邮件</title>
+<style type="text/css">
+body {
+	background-image:url("{{ static_url('../static/4.jpg') }}");
+	background-size: cover;
+	}
+		.xinzhi{
+		position:absolute;
+		left:180px;
+		top:120px;
+		border:10px solid #FFFFFF;
+		background-color:#FFFFFF;
+		width:1100px;
+		height:500px;
+		margin:0 auto;
+		border-radius:10px;
+		-moz-box-shadow:10px 10px 10px #888888;
+		box-shadow:20px 20px 15px #888888;
+	}
+	.xinxi{
+		width: 400px;
+		height:500px;
+	}
+	.lan1{
+		position:relative;
+		left:30px;
+		top:50px;
+		color:#000000;
+		font-family: "宋体";
+		font-size:32px;
+	}
+	.kuang1{
+		position:relative;
+		left:0px;
+		top:-7px;
+		border:1px solid #193B57;
+		border-radius:5px;
+		height:30px;
+		width:150px;
+		font-size:20px;
+	}
+	.kuang2{
+		position:relative;
+		left:0px;
+		top:15px;
+		border:1px solid #193B57;
+		border-radius:5px;
+		height:30px;
+		width:250px;
+		font-size:20px;
+	}
+	.xinyuan{
+		position:absolute;
+		left:400px;
+		top:0px;
+		width: 400px;
+		height:500px;
+	}
+	.biaotixuyuan{
+		position:relative;
+		left:110px;
+		top:-10px;
+		font-size:60px;
+		font-weight:600;
+		color:#034A1B
+	}
+	.xuyuanlan{
+		border-radius:5px;
+		font-size:30px;
+	}
+	.zhiwen{
+		position:absolute;
+		left:875px;
+		top:225px;
+		width: 100px;
+		height:100px;
+	}
+</style>
+	<script type="text/javascript">
+function mouseOver()
+{
+document.getElementById('b1').src ="/static/2.jpg"
+}
+function mouseOut()
+{
+document.getElementById('b1').src ="/static/1.jpg"
+}
+</script>
+</head>
+
+<body>
+<Div class="xinzhi">
+	<form id="formm" name="formm" method="post" >
+	<Div class="xinxi">
+		<p class="lan1">姓名：
+			<input type="text" name="name" class="kuang1">
+		</p>
+		<p class="lan1">好友QQ邮件1：<br>
+			<input name="email1" type="email" value="" class="kuang2">
+		</p>
+		<p class="lan1">好友QQ邮件2：<br>
+			<input name="email2" type="email" value="" class="kuang2">
+		</p>
+		<p class="lan1">好友QQ邮件3：<br>
+			<input name="email3" type="email" value="" class="kuang2">
+		</p>
+		</div>
+		<Div class="xinyuan">
+		<p class="biaotixuyuan">心 愿</p>
+		<textarea name="text" cols="20" rows="6" class="xuyuanlan"></textarea>
+		</div>
+		<Div class="zhiwen">
+			<a onmouseover="mouseOver()" onmouseout="mouseOut()">
+			<input type = "image" id="b1" name="submit" src = "/static/1.jpg" inclick ="document.foormName.submit()">
+			</a>
+			</div>
+	</form>
+	</div>
+</body>
+</html>
